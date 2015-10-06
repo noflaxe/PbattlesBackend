@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+
+    <bean id="basicContainer" class="com.pbattles.usercollection.UserContainer"/>
+    <bean id="consoleResponceHandler" class="com.pbattles.response.ConsoleResponseHandler"/>
+    <bean id="webViewReponseHandler" class="com.pbattles.response.WebViewResponceHandler"/>
+    <bean id="duplicateValidator" class="com.pbattles.strategy.DuplicateValidator"/>
+    <bean id="naiveShuffleStrategy" class="com.pbattles.strategy.NaiveStrategy">
+        <property name="minimumUsersInRoom" value="2"/>
+        <property name="roomCapacity" value="6"/>
+    </bean>
+
+    <bean id="basicShuffler" class="com.pbattles.shuffler.UserShuffler" init-method="init">
+        <property name="container" ref="basicContainer"/>
+        <property name="responseHandler" ref="webViewReponseHandler"/>
+        <property name="roomValidator" ref="duplicateValidator"/>
+        <property name="shuffleStrategy" ref="naiveShuffleStrategy"/>
+        <property name="scheduler" ref="scheduler"/>
+    </bean>
+
+    <bean id="signalServer" class="com.pbattles.socketio.SignalSocketIOServer" lazy-init="false" scope="singleton"
+          init-method="init" destroy-method="close">
+            <property name="host" value="${socketio.host}" />
+            <property name="port" value="${socketio.port}" />
+            </bean>
+
+    <bean id="roomContainer" class="com.pbattles.roomlogic.QueueBasedContainer" init-method="initSchedule">
+        <property name="usersInRoom" value="5"/>
+        <property name="scheduler" ref="scheduler" />
+    </bean>
+
+    <bean id="roomService" class="com.pbattles.roomlogic.RandomRoomServiceImpl">
+        <property name="roomContainer" ref="roomContainer"/>
+    </bean>
+
+    <task:scheduler id="scheduler" pool-size="10"/>
+
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>
+                    classpath:properties/socketio.properties
+                </value>
+            </list>
+        </property>
+     </bean>
+
+    <import resource="classpath:mainRunners.xml"/>
+    <import resource="classpath:mongodb-config.xml"/>
+</beans>

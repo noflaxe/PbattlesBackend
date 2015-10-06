@@ -1,0 +1,168 @@
+html, body {
+    width:100%;
+    height: 100%;
+    min-width: 1024px;
+    min-height: 100%;
+    /*background-color: #ffffff;*/
+}
+
+#wrap {
+    height: 100%;
+    position: relative;
+}
+
+header, footer {
+    position: fixed !important;
+    width: 100%;
+    z-index:101;
+}
+
+footer {
+    background-color: #ffffff;
+}
+
+#webcams_section {
+    position: fixed;
+}
+
+header, header .navbar-inverse .brand, .navbar-inverse .nav > li > a {
+    color: #ffffff;
+}
+
+.navbar-inverse .nav li.dropdown > .dropdown-toggle .caret {
+    border-bottom-color: #ffffff;
+    border-top-color: #ffffff;
+}
+
+.navbar-inverse .navbar-inner,
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
+.navbar-inverse .nav li.dropdown.active > .dropdown-toggle,
+.navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
+    background: #4d8eb9 none no-repeat;
+    border-color: #999999;
+    filter: none;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #398439;
+    /*border: 1px;*/
+}
+
+.navbar-inner { background-color: #2980b9; }
+
+.navbar-inverse .navbar-brand { color: #fff; }
+
+.navbar-nav > li > a.btn-lg {
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;
+}
+
+.navbar-nav > li > a.btn-default {
+    background-color: #2980b9;
+}
+
+.navbar-nav > li > a.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    white-space: nowrap;
+    -moz-user-select: none;
+}
+
+ul.nav li {
+    margin: 0 10px;
+    border: 1px black;
+}
+
+.navbar-nav > li > a {
+    padding: 5px;
+}
+
+.navbar-nav > li > a:hover {
+    background: #285e8e !important;
+    border-color: transparent;
+}
+
+.navbar-collapse {
+    padding-right: 0;
+}
+
+.navbar {
+    border-radius: 0 0 3px 3px;
+}
+
+div.tooltip-inner {
+    text-align: center;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    margin-bottom: 6px;
+    background-color: #505050;
+    font-size: 14px;
+
+    white-space:pre;
+}
+
+footer {
+    border: none;
+    border-top: 1px #ccc solid;
+    clear: both;
+    margin-top: -26px;
+    padding: 5px 10px;
+    position: relative;
+    font-weight: bold;
+}
+
+.webcam-section {
+    width: 100%;
+    position: fixed;
+    top: 40%;
+    left: 25%;
+    margin-top: -250px;
+    margin-left: -250px;
+    float:left;
+}
+
+.webcam-section-me {
+    width: 100%;
+    position: fixed;
+    bottom: 5%;
+    left: 10%;
+    margin-top: -150px;
+    margin-left: -150px;
+    float:left;
+}
+
+.person-name {
+    margin: 10px;
+    vertical-align: bottom;
+    display: inline-table;
+}
+
+.settings-view .control-label {
+    float: left;
+    width: 200px;
+    padding-top: 5px;
+    text-align: left;
+    font-weight: bolder;
+    vertical-align: middle;
+}
+
+.vert-align-middle {
+    vertical-align: middle;
+}
+
+.modal-dialog {
+    top: 20%;
+}
+

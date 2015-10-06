@@ -1,0 +1,36 @@
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+
+.field-validation-error { color: rgb(185, 74, 72); }
+
+.field-validation-valid { display: none; }
+
+.input-validation-error { border-color: rgb(185, 74, 72); }
+
+.validation-summary-errors {
+    color: rgb(185, 74, 72);
+    font-weight: bold;
+}
+
+.validation-summary-valid { display: none; }
+
+.bs-callout {
+    border-left: 5px solid rgb(238, 238, 238);
+    margin: 20px 0;
+    padding: 15px 30px 15px 15px;
+}
+
+.bs-callout-danger {
+    background-color: #fcf2f2;
+    border-color: #dFb5b4;
+}
+
+.bs-callout-warning {
+    background-color: #fefbed;
+    border-color: #f1e7bc;
+}
+
+.bs-callout-info {
+    background-color: #f0f7fd;
+    border-color: #d0e3f0;
+}
