@@ -13,6 +13,13 @@ public class RegistrationInfo {
     public RegistrationInfo() {
     }
 
+    public RegistrationInfo(String login, String name, String password) {
+        this.login = login;
+        this.name = name;
+        this.password = password;
+        this.passwordRepeat = password;
+    }
+
     public RegistrationInfo(String login, String name, String password, String passwordRepeat) {
         this.login = login;
         this.name = name;

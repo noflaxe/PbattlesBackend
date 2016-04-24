@@ -20,7 +20,7 @@ public class SpringMongoConfig  {
         return new SimpleMongoDbFactory(new MongoClient(),dbName);
     }
 
-    public @Bean
+    public @Bean(name="mongoTemplate")
     MongoTemplate mongoTemplate() throws Exception{
         return new MongoTemplate(mongoDbFactory());
     }

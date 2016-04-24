@@ -68,4 +68,8 @@ public class AccountDao implements IAccountDao {
     private Query createSearchQueryByUniqueId(Object id) {
         return new Query(Criteria.where(UNIQUE_ID).is(id));
     }
+
+    public void setMongoTemplate(MongoOperations mongoTemplate) {
+        this.mongoTemplate = mongoTemplate;
+    }
 }

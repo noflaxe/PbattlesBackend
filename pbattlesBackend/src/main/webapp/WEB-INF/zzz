@@ -15,7 +15,7 @@
             <list><value>classpath:properties/socketio.properties</value></list>
         </property>
     </bean>
-    
+
     <import resource="classpath:spring-config.xml" />
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages/"/>
@@ -30,6 +30,6 @@
 
     <mvc:resources mapping="/**" location="/media/" />
 
-    	<mvc:annotation-driven />
+    <mvc:annotation-driven />
 
 </beans>

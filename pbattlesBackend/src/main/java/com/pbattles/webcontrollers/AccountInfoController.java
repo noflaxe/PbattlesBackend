@@ -59,7 +59,6 @@ public class AccountInfoController {
     @RequestMapping(value="logout"/*,method = RequestMethod.POST*/)
     public String logout(HttpServletResponse response){
         response.addCookie(new Cookie("account",""));
-        System.out.println("LOGOUT PRESSED");
         return "reloadmain";
     }
 
@@ -79,5 +78,13 @@ public class AccountInfoController {
             System.out.println("Okay");
             return true;
         }
+    }
+
+    public void setRegistrationInfoValidator(Validator registrationInfoValidator) {
+        this.registrationInfoValidator = registrationInfoValidator;
+    }
+
+    public void setAccountBL(IAccountBL accountBL) {
+        this.accountBL = accountBL;
     }
 }

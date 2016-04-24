@@ -45,4 +45,8 @@ public class RegistrationInfoValidator implements Validator {
         }
 
     }
+
+    public void setAccountBL(IAccountBL accountBL) {
+        this.accountBL = accountBL;
+    }
 }

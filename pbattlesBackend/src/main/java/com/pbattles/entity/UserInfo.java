@@ -59,20 +59,23 @@ public class UserInfo {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        UserInfo that = (UserInfo) o;
+        UserInfo userInfo = (UserInfo) o;
 
-        if (accountName != null ? !accountName.equals(that.accountName) : that.accountName != null) return false;
-        if (sessionId != null ? !sessionId.equals(that.sessionId) : that.sessionId != null) return false;
-        if (!userId.equals(that.userId)) return false;
+        if (accountName != null ? !accountName.equals(userInfo.accountName) : userInfo.accountName != null)
+            return false;
+        if (roomUsers != null ? !roomUsers.equals(userInfo.roomUsers) : userInfo.roomUsers != null) return false;
+        if (sessionId != null ? !sessionId.equals(userInfo.sessionId) : userInfo.sessionId != null) return false;
+        if (userId != null ? !userId.equals(userInfo.userId) : userInfo.userId != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = userId.hashCode();
+        int result = userId != null ? userId.hashCode() : 0;
         result = 31 * result + (sessionId != null ? sessionId.hashCode() : 0);
         result = 31 * result + (accountName != null ? accountName.hashCode() : 0);
+        result = 31 * result + (roomUsers != null ? roomUsers.hashCode() : 0);
         return result;
     }
 

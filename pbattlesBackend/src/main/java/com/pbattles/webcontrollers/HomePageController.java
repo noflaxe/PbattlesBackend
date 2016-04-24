@@ -44,4 +44,7 @@ public class HomePageController {
         return "room";
     }
 
+    public void setRoomService(RandomRoomService roomService) {
+        this.roomService = roomService;
+    }
 }
