@@ -24,7 +24,7 @@ import javax.servlet.http.HttpServletResponse;
 public class AccountInfoController {
 
     @Autowired
-    private Validator accountValidator;
+    private Validator registrationInfoValidator;
 
     @Autowired
     private IAccountBL accountBL;
@@ -39,7 +39,6 @@ public class AccountInfoController {
             m.addAttribute("warning","User with this login already exists or password didnt match");
             return "index";
         }
-
     }
 
     @RequestMapping(value = "login",method = RequestMethod.POST)
@@ -71,7 +70,7 @@ public class AccountInfoController {
     }
 
     private boolean validateInput(RegistrationInfo info,BindingResult result) {
-        accountValidator.validate(info, result);
+        registrationInfoValidator.validate(info, result);
         System.out.println("Validation start!");
         if(result.hasErrors()){
             System.out.println("Validation fail!");

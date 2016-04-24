@@ -20,8 +20,6 @@ import java.util.Random;
 @Controller
 public class HomePageController {
 
-
-
     @Autowired
     private RandomRoomService roomService;
 
