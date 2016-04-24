@@ -1,0 +1,104 @@
+-------------------------------------------------------------------------------
+Test set: com.pbattles.usercollection.UserContainerTest
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 0, Errors: 10, Skipped: 0, Time elapsed: 0.044 sec <<< FAILURE! - in com.pbattles.usercollection.UserContainerTest
+getAllReturnOnLotsOfElementsAndNull(com.pbattles.usercollection.UserContainerTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at com.pbattles.entity.UserInfo.hashCode(UserInfo.java:73)
+	at java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1012)
+	at java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at java.util.Collections$SetFromMap.add(Collections.java:5461)
+	at com.pbattles.usercollection.UserContainer.addUser(UserContainer.java:21)
+	at com.pbattles.usercollection.UserContainerTest.addUserInfoToContainer(UserContainerTest.java:129)
+	at com.pbattles.usercollection.UserContainerTest.getAllReturnOnLotsOfElementsAndNull(UserContainerTest.java:67)
+
+addIsNotFailingOnRepeatableAdd(com.pbattles.usercollection.UserContainerTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at com.pbattles.entity.UserInfo.hashCode(UserInfo.java:73)
+	at java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1012)
+	at java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at java.util.Collections$SetFromMap.add(Collections.java:5461)
+	at com.pbattles.usercollection.UserContainer.addUser(UserContainer.java:21)
+	at com.pbattles.usercollection.UserContainerTest.addUserInfoToContainer(UserContainerTest.java:129)
+	at com.pbattles.usercollection.UserContainerTest.addIsNotFailingOnRepeatableAdd(UserContainerTest.java:35)
+
+getAllReturnOnOneElement(com.pbattles.usercollection.UserContainerTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at com.pbattles.entity.UserInfo.hashCode(UserInfo.java:73)
+	at java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1012)
+	at java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at java.util.Collections$SetFromMap.add(Collections.java:5461)
+	at com.pbattles.usercollection.UserContainer.addUser(UserContainer.java:21)
+	at com.pbattles.usercollection.UserContainerTest.addUserInfoToContainer(UserContainerTest.java:129)
+	at com.pbattles.usercollection.UserContainerTest.getAllReturnOnOneElement(UserContainerTest.java:46)
+
+getAllReturnOnLotsOfElements(com.pbattles.usercollection.UserContainerTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at com.pbattles.entity.UserInfo.hashCode(UserInfo.java:73)
+	at java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1012)
+	at java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at java.util.Collections$SetFromMap.add(Collections.java:5461)
+	at com.pbattles.usercollection.UserContainer.addUser(UserContainer.java:21)
+	at com.pbattles.usercollection.UserContainerTest.addUserInfoToContainer(UserContainerTest.java:129)
+	at com.pbattles.usercollection.UserContainerTest.getAllReturnOnLotsOfElements(UserContainerTest.java:53)
+
+removeUserOnNotExisting(com.pbattles.usercollection.UserContainerTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at com.pbattles.entity.UserInfo.hashCode(UserInfo.java:73)
+	at java.util.concurrent.ConcurrentHashMap.replaceNode(ConcurrentHashMap.java:1106)
+	at java.util.concurrent.ConcurrentHashMap.remove(ConcurrentHashMap.java:1097)
+	at java.util.Collections$SetFromMap.remove(Collections.java:5460)
+	at com.pbattles.usercollection.UserContainer.removeUser(UserContainer.java:26)
+	at com.pbattles.usercollection.UserContainerTest.removeUserInfoFomContainer(UserContainerTest.java:122)
+	at com.pbattles.usercollection.UserContainerTest.removeUserOnNotExisting(UserContainerTest.java:75)
+
+removeUserOnExistingElement(com.pbattles.usercollection.UserContainerTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at com.pbattles.entity.UserInfo.hashCode(UserInfo.java:73)
+	at java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1012)
+	at java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at java.util.Collections$SetFromMap.add(Collections.java:5461)
+	at com.pbattles.usercollection.UserContainer.addUser(UserContainer.java:21)
+	at com.pbattles.usercollection.UserContainerTest.addUserInfoToContainer(UserContainerTest.java:129)
+	at com.pbattles.usercollection.UserContainerTest.removeUserOnExistingElement(UserContainerTest.java:82)
+
+removeUserOnExistingElements(com.pbattles.usercollection.UserContainerTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at com.pbattles.entity.UserInfo.hashCode(UserInfo.java:73)
+	at java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1012)
+	at java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at java.util.Collections$SetFromMap.add(Collections.java:5461)
+	at com.pbattles.usercollection.UserContainer.addUser(UserContainer.java:21)
+	at com.pbattles.usercollection.UserContainerTest.addUserInfoToContainer(UserContainerTest.java:129)
+	at com.pbattles.usercollection.UserContainerTest.removeUserOnExistingElements(UserContainerTest.java:90)
+
+removeUserOnNotExistingElements(com.pbattles.usercollection.UserContainerTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at com.pbattles.entity.UserInfo.hashCode(UserInfo.java:73)
+	at java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1012)
+	at java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at java.util.Collections$SetFromMap.add(Collections.java:5461)
+	at com.pbattles.usercollection.UserContainer.addUser(UserContainer.java:21)
+	at com.pbattles.usercollection.UserContainerTest.addUserInfoToContainer(UserContainerTest.java:129)
+	at com.pbattles.usercollection.UserContainerTest.removeUserOnNotExistingElements(UserContainerTest.java:98)
+
+removeNullOnExistingElements(com.pbattles.usercollection.UserContainerTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at com.pbattles.entity.UserInfo.hashCode(UserInfo.java:73)
+	at java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1012)
+	at java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at java.util.Collections$SetFromMap.add(Collections.java:5461)
+	at com.pbattles.usercollection.UserContainer.addUser(UserContainer.java:21)
+	at com.pbattles.usercollection.UserContainerTest.addUserInfoToContainer(UserContainerTest.java:129)
+	at com.pbattles.usercollection.UserContainerTest.removeNullOnExistingElements(UserContainerTest.java:106)
+
+addIsNotFailing(com.pbattles.usercollection.UserContainerTest)  Time elapsed: 0.003 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at com.pbattles.entity.UserInfo.hashCode(UserInfo.java:73)
+	at java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1012)
+	at java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at java.util.Collections$SetFromMap.add(Collections.java:5461)
+	at com.pbattles.usercollection.UserContainer.addUser(UserContainer.java:21)
+	at com.pbattles.usercollection.UserContainerTest.addUserInfoToContainer(UserContainerTest.java:129)
+	at com.pbattles.usercollection.UserContainerTest.addIsNotFailing(UserContainerTest.java:25)
+
